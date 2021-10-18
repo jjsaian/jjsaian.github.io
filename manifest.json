@@ -1,7 +1,7 @@
 {
     "name": "Suri",
     "short_name": "Suri",
-    "start_url": "/",
+    "start_url": "./index.html",
     "background_color": "#6dcdb1",
     "theme_color": "#009578",
     "display": "standalone",
