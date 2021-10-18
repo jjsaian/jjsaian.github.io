@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- MVP-->
+<!-- Wallet Applications -->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -8,12 +10,52 @@
         <link rel="stylesheet" href="src/master.css">
         <link rel="stylesheet" href="manifest.json">
         <link rel="apple-touch-icon" href="images/logo192.png">
+        
+        <title>SURI Wallet Application</title>
+        </style>
+        <script type = "text/javascript">
+        function Create()
+        {
+        document.suri.create.value = "suri:A7GHEN3239NZZEKOCL[https://www.ianmccloskey.com]";
+        }
+
+        function RequestCred()
+        {
+            var x=document.getElementById("l1")
+            x.style.display="block";
+        }
+
+        function SendCred()
+        {
+        document.suri.send.value = "Credential Sent";
+        }
+ 
+        </script>
 
     </head>
     <body>
-        <p>Suri</p>
-        <p>Test Update1</p>
-        <p>Testing Release 1.3</p>
+        <form name = "suri" action = "">
+        <table border = "1"; width = 50%;>
+          <caption>Create your self-certified uniform resource identifier</caption>
+          <tr><td>Create SURI</td>
+            <td><input name = "create" type = "text" style="width: 375px;"/>
+            <tr><td><input type = "button" value = "Create SURI" onclick = "Create()" /></td></tr>
+            </td></tr>
+          <tr><td>Available Credentials</td>
+            <tbody style="display:none" id="l1"><td><input type="checkbox" id="list" name="degree">
+            <label for="list"> Bachelor Degree</label><br>
+            <input type="checkbox" id="list" name="driver" value="DriversLicense">
+            <label for="list"> Drivers License</label><br>
+            <input type="checkbox" id="list" name="passport" value="Passport">
+            <label for="list"> Passport</label><br></td></tbody>
+          <tr><td><input type = "button" value = "Get Credentials" onclick = "RequestCred()" /></td></tr>
+          </td></tr>
+          <tr><td>Send Credential</td>
+          <td><input name = "send" type = "text"/>
+          <tr><td><input type = "button" value = "Send Credential" onclick = "SendCred()" /></td></tr>
+          </td></tr>
+        </table>
+      </form>
         <script src="src/index.js"></script>
     </body>
 </html>
